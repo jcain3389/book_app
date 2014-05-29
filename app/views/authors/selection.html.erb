@@ -1,0 +1,20 @@
+<h1><%= @selection["name"] %></h1>
+<div class="factoids">
+  <img src="<%= @selection["image_url"] %>">
+  <ul>
+    <li><b>Hometown: <%= @selection["hometown"] %></b></li>
+    <li><b>Born: <%= @selection["born_at"] %></b></li>
+    <li><b>Died: <%= @selection["died_at"] %></b></li>
+  </ul>
+</div>
+
+<div class="main">
+  <p>About <%= @selection["name"] %>: <%= @author_about.html_safe %></p>
+
+  <p><%= link_to "Books by #{@selection["name"]}", authors_books_path + "?id=#{@selection["id"]}" %></p>
+</div>
+
+<%= form_for [@user, @author] do |f| %>
+  <%= f.hidden_field :name, :value => @selection["name"] %>
+  <%= f.submit "Add #{@selection["name"]} to your 'Authors to Read' list", id: "submit" %>
+<% end %>

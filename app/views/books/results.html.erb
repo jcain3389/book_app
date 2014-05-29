@@ -1,0 +1,11 @@
+<h2>Your search yielded <%= @num_results %> results:</h2>
+
+
+<ol>
+  <% @book_results.each do |book| %>
+    <li><%= link_to "#{book["best_book"]["title"]}", books_selection_path + "?id=#{book["best_book"]["id"]}" %></li>
+  <% end %>
+</ol>
+
+
+

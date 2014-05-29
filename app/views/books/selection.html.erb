@@ -1,0 +1,21 @@
+<h2><%= @selection["title"]%></h2>
+<img src="<%= @selection["image_url"]%>">
+<ul>
+  <li>Author: <%= @author_name %></li>
+  <li>Publication Date: <%= @selection["work"]["original_publication_month"]%>/<%= @selection["work"]["original_publication_day"]%>/<%= @selection["work"]["original_publication_year"]%></li>
+  <li>Pages: <%= @selection["num_pages"] %></li>
+  <li>Average Rating: <%= @selection["average_rating"]%> / 5 stars</li>
+</ul>
+
+  <p>Description: <%= @selection_desc.html_safe %></p>
+
+  <%= link_to "Reviews of #{@selection["title"]}", books_reviews_path + "?id=#{@selection["id"]}" %>
+
+<% if signed_in? %>
+  <%= form_for [current_user, @book] do |f| %>
+    <%= f.hidden_field :title, :value => @selection["title"] %>
+    <%= f.hidden_field :author, :value => @author_name %>
+    <%= f.submit "Add #{@selection["title"]} to your bookshelf", id: "submit" %>
+  <% end %>
+<% end %>
+

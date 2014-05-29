@@ -1,0 +1,16 @@
+<h1><%= @user.name %>'s Bookshelf</h1>
+
+<ol>
+  <% @books.each do |book| %>
+    <li><div class="book-info"><%= book.title %>  |   <%= book.author %>  |
+        <%= form_for [@user, book] do |f| %>
+          <%= f.hidden_field :read, :value => true %>
+          <%= f.submit book.read ? "Read" : "Unread", id: "update" %>
+        <%end%> |
+        <%= form_for [@user, book], method: 'delete' do |f| %>
+          <%= f.submit "Delete", id: "destroy" %>
+        <% end %></div></li>
+  <% end %>
+</ol>
+
+

@@ -1,0 +1,56 @@
+body {
+  background-image: image-url("bookshelf.png");
+  background-position: center;
+  background-size: cover;
+}
+
+.page {
+  background-color: #FFF;
+  margin: 0 auto;
+  padding: 50px;
+  width: 700px;
+}
+
+h1 {
+  color: #cd853f;
+  font-family: "Londrina Shadow";
+  font-size: 60px;
+  width: 800px;
+}
+
+h2 {
+  color: #cd853f;
+  font-family: helvetica;
+}
+
+p {
+  color: #cd853f;
+  font-family: helvetica;
+}
+
+.factoids {
+  float: left;
+  margin-right: 30px;
+  text-align: center;
+
+  ul {
+    list-style: none;
+    padding: 0;
+  }
+
+  b {
+    color: #8b4513;
+    font-family: helvetica;
+    font-size: 20px;
+  }
+}
+
+.main {
+  overflow: hidden;
+}
+
+.book-info form {
+  display: inline-block;
+}
+
+

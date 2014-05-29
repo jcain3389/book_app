@@ -1,0 +1,8 @@
+<h1><%= @user.name %>'s Authors to Read</h1>
+<ol>
+  <% @authors.each do |author| %>
+    <li><%= author.name %>    |     <%= form_for [@user, author], method: 'delete' do |f| %>
+      <%= f.submit "Delete", id: "destroy" %>
+    <% end %></li>
+  <% end %>
+</ol>

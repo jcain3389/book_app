@@ -1,0 +1,20 @@
+<h1>BookSmart</h1>
+<h2>Your virtual personal library.</h2>
+
+<p>
+  <%= form_tag("/authors_results", method: "get") do %>
+    <%= label_tag(:query, "Search for author:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</p>
+
+<p>
+  <%= form_tag("/books_results", method: "get") do %>
+    <%= label_tag(:query, "Search for book:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Search") %>
+  <% end %>
+</p>
+
+
