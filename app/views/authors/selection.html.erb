@@ -14,7 +14,10 @@
   <p><%= link_to "Books by #{@selection["name"]}", authors_books_path + "?id=#{@selection["id"]}" %></p>
 </div>
 
-<%= form_for [@user, @author] do |f| %>
-  <%= f.hidden_field :name, :value => @selection["name"] %>
-  <%= f.submit "Add #{@selection["name"]} to your 'Authors to Read' list", id: "submit" %>
+<% if signed_in? %>
+  <%= form_for [@user, @author] do |f| %>
+    <%= f.hidden_field :name, :value => @selection["name"] %>
+    <%= f.hidden_field :gra_id, :value => @selection["id"] %>
+    <%= f.submit "Add #{@selection["name"]} to your 'Authors to Read' list", id: "submit" %>
+  <% end %>
 <% end %>

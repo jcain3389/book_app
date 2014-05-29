@@ -3,6 +3,9 @@
     Signed in as <%= link_to current_user.name, current_user %>
     <%= f.submit 'Sign out', id: 'signout' %>
   <% end %>
+  <%= link_to "#{current_user.name}'s Bookshelf", user_books_path(current_user) %>
+  <%= link_to "#{current_user.name}'s Authors to Read", user_authors_path(current_user) %>
 <% else %>
   <%= link_to "Sign In", signin_path %> | <%= link_to "Sign up", signup_path %>
 <% end %>
+<%= link_to "Home", root_path %>

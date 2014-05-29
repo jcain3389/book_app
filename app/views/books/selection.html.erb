@@ -15,6 +15,7 @@
   <%= form_for [current_user, @book] do |f| %>
     <%= f.hidden_field :title, :value => @selection["title"] %>
     <%= f.hidden_field :author, :value => @author_name %>
+    <%= f.hidden_field :grb_id, :value => @selection["id"] %>
     <%= f.submit "Add #{@selection["title"]} to your bookshelf", id: "submit" %>
   <% end %>
 <% end %>

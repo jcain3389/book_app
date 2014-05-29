@@ -23,6 +23,7 @@ class AuthorsController < ApplicationController
 
   def selection
     @selection = get_author_info(params[:id])
+
     if @selection["about"] == nil
       @author_about = "No info provided."
     else
@@ -58,7 +59,7 @@ class AuthorsController < ApplicationController
   end
 
   def author_params
-    params.require(:author).permit(:name)
+    params.require(:author).permit(:name, :gra_id)
   end
 
 end

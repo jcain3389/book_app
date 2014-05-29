@@ -2,7 +2,7 @@
 
 <ol>
   <% @books.each do |book| %>
-    <li><div class="book-info"><%= book.title %>  |   <%= book.author %>  |
+    <li><div class="book-info"><%= link_to "#{book.title}", books_selection_path + "?id=#{book.grb_id}"%>  |   <%= book.author %>  |
         <%= form_for [@user, book] do |f| %>
           <%= f.hidden_field :read, :value => true %>
           <%= f.submit book.read ? "Read" : "Unread", id: "update" %>
