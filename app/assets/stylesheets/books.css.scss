@@ -4,6 +4,9 @@ body {
   background-size: cover;
 }
 
+span.links {
+  color: white;
+}
 .page {
   background-color: #FFF;
   margin: 0 auto;
@@ -59,20 +62,18 @@ p {
 
 .nav {
   color: white;
+  text-align: center;
 }
 
-a {
-  text-decoration: none;
-}
 
 a:link {
   color: #cd853f;
 }
 
 a:visited {
-  color: #cd853f;
+  color: #7f3d17;
 }
 
-a:active {
-  color: #cd853f;
-}
+// a:active {
+//   color: #cd853f;
+// }

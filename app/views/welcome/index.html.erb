@@ -1,5 +1,8 @@
 <h1>BookSmart</h1>
 <h2>Your virtual personal library.</h2>
+<% flash.each do |name, msg| %>
+  <%= content_tag :p, msg, class: name %>
+<% end %>
 
 <p>
   <%= form_tag("/authors_results", method: "get") do %>

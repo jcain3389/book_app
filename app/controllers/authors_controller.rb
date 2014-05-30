@@ -19,11 +19,15 @@ class AuthorsController < ApplicationController
 
   def results
     @results = get_author(params[:author_query])
+
+    if @results == nil
+      flash[:error] = "This person isn't real."
+      redirect_to root_path
+    end
   end
 
   def selection
     @selection = get_author_info(params[:id])
-
     if @selection["about"] == nil
       @author_about = "No info provided."
     else
@@ -40,10 +44,11 @@ class AuthorsController < ApplicationController
   private
 
   def get_author(search)
+
     name = search.gsub(" ", "+")
     author_page = HTTParty.get("https://www.goodreads.com/api/author_url/#{name}?key=#{ENV['GR_API_KEY']}")
     author_info = author_page["GoodreadsResponse"]["author"]
-    return author_info
+    # return author_info
   end
 
   def get_author_info(id)

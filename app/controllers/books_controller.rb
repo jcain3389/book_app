@@ -29,8 +29,26 @@ class BooksController < ApplicationController
 
   def results
     @results = get_book(params[:book_query])
+    if @results == nil
+      flash[:error] = "This book isn't real."
+      redirect_to root_path
+    end
+
     @num_results = @results["GoodreadsResponse"]["search"]["results_end"]
-    @book_results = @results["GoodreadsResponse"]["search"]["results"]["work"]
+
+    if @results["GoodreadsResponse"]["search"]["results"] == nil
+      flash[:error] = "This book isn't real."
+      redirect_to root_path
+    else
+      @book_results = @results["GoodreadsResponse"]["search"]["results"]["work"]
+    end
+
+
+    # if @book_results == nil || @num_results == nil
+
+    #   flash[:error] = "This herpderp isn't real."
+    #   redirect_to root_path
+    # end
   end
 
   def selection
