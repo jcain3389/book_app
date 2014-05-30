@@ -45,6 +45,7 @@ group :development, :test do
   gem 'launchy'
   gem 'factory_girl_rails'
   gem 'ffaker'
+  gem 'simplecov', '~> 0.8.2'
 end
 
 gem 'dotenv-rails', :groups => [:development, :test]
@@ -52,3 +53,5 @@ gem 'dotenv-rails', :groups => [:development, :test]
 ruby "2.1.1"
 
 gem 'rails_12factor', group: :production
+
+

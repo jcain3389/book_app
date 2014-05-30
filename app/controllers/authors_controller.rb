@@ -18,7 +18,7 @@ class AuthorsController < ApplicationController
   end
 
   def results
-    @results = get_author(params[:query])
+    @results = get_author(params[:author_query])
   end
 
   def selection

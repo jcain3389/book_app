@@ -28,7 +28,7 @@ class BooksController < ApplicationController
   end
 
   def results
-    @results = get_book(params[:query])
+    @results = get_book(params[:book_query])
     @num_results = @results["GoodreadsResponse"]["search"]["results_end"]
     @book_results = @results["GoodreadsResponse"]["search"]["results"]["work"]
   end

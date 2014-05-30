@@ -3,17 +3,17 @@
 
 <p>
   <%= form_tag("/authors_results", method: "get") do %>
-    <%= label_tag(:query, "Search for author:") %>
-    <%= text_field_tag(:query) %>
-    <%= submit_tag("Search") %>
+    <%= label_tag(:author_query, "Search for author:") %>
+    <%= text_field_tag(:author_query) %>
+    <%= submit_tag("Search", id: "author_submit") %>
   <% end %>
 </p>
 
 <p>
   <%= form_tag("/books_results", method: "get") do %>
-    <%= label_tag(:query, "Search for book:") %>
-    <%= text_field_tag(:query) %>
-    <%= submit_tag("Search") %>
+    <%= label_tag(:book_query, "Search for book:") %>
+    <%= text_field_tag(:book_query) %>
+    <%= submit_tag("Search", id: "book_submit") %>
   <% end %>
 </p>
 
