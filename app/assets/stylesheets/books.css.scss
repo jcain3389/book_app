@@ -1,4 +1,5 @@
 body {
+  background-attachment: fixed;
   background-image: image-url("bookshelf.png");
   background-position: center;
   background-size: cover;
@@ -7,23 +8,27 @@ body {
 span.links {
   color: white;
 }
+
 .page {
-  background-color: #FFF;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 20px;
   margin: 0 auto;
-  padding: 50px;
-  width: 700px;
+  padding: 30px;
+  width: 500px;
 }
 
 h1 {
   color: #cd853f;
   font-family: "Londrina Shadow";
   font-size: 60px;
-  width: 800px;
+  margin: 20px;
+  text-align: center;
 }
 
 h2 {
   color: #cd853f;
   font-family: helvetica;
+  text-align: center;
 }
 
 p {
@@ -32,37 +37,62 @@ p {
 }
 
 .factoids {
+  background-color: rgba(205,133,63,0.7);
+  border-radius: 10px;
   float: left;
-  margin-right: 30px;
+  margin: 15px;
+  margin-top: 30px;
+  padding: 15px;
   text-align: center;
 
-  ul {
-    list-style: none;
-    padding: 0;
+  img {
+    border: 3px;
+    border-color: #7f3d17;
+    border-style: solid;
+    margin-top: 15px;
   }
 
-  b {
-    color: #8b4513;
+  ul {
+    color: #7f3d17;
     font-family: helvetica;
-    font-size: 20px;
+    list-style: none;
+    padding: 0;
+    text-align: left;
   }
+
+  // b {
+  //   color: #8b4513;
+  //   font-family: helvetica;
+  //   font-size: 20px;
+  // }
 }
 
 .main {
-  overflow: hidden;
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  padding: 15px;
 }
 
 .book-info form {
   display: inline-block;
+  float: right;
 }
 
 .author-info form{
   display: inline-block;
+  float: right;
 }
 
 .nav {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
   color: white;
-  text-align: center;
+  left: 10px;
+  padding: 15px;
+  position: fixed;
+  text-align: left;
+  top: 10px;
+  width: auto;
 }
 
 
@@ -77,3 +107,65 @@ a:visited {
 // a:active {
 //   color: #cd853f;
 // }
+form {
+  text-align: center;
+}
+
+form label {
+  font-family: helvetica;
+}
+
+.author-book-results {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+.author-book-results li {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  margin-bottom: 10px;
+  padding: 10px;
+}
+
+.author-book-results a {
+  font-family: helvetica;
+  text-decoration: none;
+}
+
+.reviews {
+  margin-top: 15px;
+  padding: 15px;
+  text-align: center;
+}
+
+.reviews a {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 5px;
+  color: #cd853f;
+  font-family: helvetica;
+  padding: 10px;
+  text-decoration: none;
+}
+
+.reviews a:hover {
+  background-color: white;
+}
+
+.name-title {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  color: #7f3d17;
+  font-family: "Londrina Shadow";
+  font-size: 40px;
+  margin-top: 0px;
+  padding: 15px;
+}
+
+.author-book-heading {
+  background-color: rgba(255,255,255,0.5);
+  border-radius: 10px;
+  color: #7f3d17;
+  margin-top: 0px;
+  padding: 15px;
+}
+
