@@ -4,20 +4,20 @@
   <%= content_tag :p, msg, class: name %>
 <% end %>
 
-<p>
-  <%= form_tag("/authors_results", method: "get") do %>
-    <%= label_tag(:author_query, "Search for author:") %>
-    <%= text_field_tag(:author_query, nil, :placeholder => "Enter name...") %>
-    <%= submit_tag("Search", id: "author_submit") %>
-  <% end %>
-</p>
 
-<p>
-  <%= form_tag("/books_results", method: "get") do %>
-    <%= label_tag(:book_query, "Search for book:") %>
-    <%= text_field_tag(:book_query, nil, :placeholder => "Enter title...") %>
-    <%= submit_tag("Search", id: "book_submit") %>
-  <% end %>
-</p>
+<%= form_tag("/authors_results", method: "get") do %>
+  <%= label_tag(:author_query, "Search for author:") %>
+  <%= text_field_tag(:author_query, nil, :placeholder => "Enter name...") %>
+  <%= submit_tag("Search", id: "author_submit") %>
+<% end %>
+
+
+
+<%= form_tag("/books_results", method: "get") do %>
+  <%= label_tag(:book_query, "Search for book:") %>
+  <%= text_field_tag(:book_query, nil, :placeholder => "Enter title...") %>
+  <%= submit_tag("Search", id: "book_submit") %>
+<% end %>
+
 
 

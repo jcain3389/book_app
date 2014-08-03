@@ -1,6 +1,6 @@
-<h2>BookSmart found these books:</h2>
+<h2 class="author-book-heading">BookSmart found the following books...</h2>
 
-<ul>
+<ul class="author-book-results">
   <% @books.each do |book| %>
   <li><%= link_to "#{book["title"]}", books_selection_path + "?id=#{book["id"]}" %></li>
   <% end %>

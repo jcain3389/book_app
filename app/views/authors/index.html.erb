@@ -1,8 +1,8 @@
 <h1><%= @user.name %>'s Authors to Read</h1>
-<ol>
+<ul class="author-book-results">
   <% @authors.each do |author| %>
-    <li><div class="author-info"><%= link_to "#{author.name}", authors_selection_path + "?id=#{author.gra_id}" %>    |     <%= form_for [@user, author], method: 'delete' do |f| %>
+    <li><div class="author-info"><%= link_to "#{author.name}", authors_selection_path + "?id=#{author.gra_id}" %><%= form_for [@user, author], method: 'delete' do |f| %>
         <%= f.submit "Delete", id: "destroy" %>
       <% end %></div></li>
   <% end %>
-</ol>
+</ul>

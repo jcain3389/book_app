@@ -1,11 +1,11 @@
-<h2>Your search yielded <%= @num_results %> results:</h2>
+<h2 class="author-book-heading">BookSmart found <%= @num_results %> results...</h2>
 
 
-<ol>
+<ul class="author-book-results">
   <% @book_results.each do |book| %>
     <li><%= link_to "#{book["best_book"]["title"]}", books_selection_path + "?id=#{book["best_book"]["id"]}" %></li>
   <% end %>
-</ol>
+</ul>
 
 
 

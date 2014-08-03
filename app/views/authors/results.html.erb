@@ -1,2 +1,4 @@
-<h2>Your search yielded the following author:</h2>
-<p><%= link_to "#{@results["name"]}", authors_selection_path + "?id=#{@results["id"]}" %></p>
+<h2 class="author-book-heading">Your search yielded the following author.  Click to learn more...</h2>
+<ul class="author-book-results">
+  <li><%= link_to "#{@results["name"]}", authors_selection_path + "?id=#{@results["id"]}" %></li>
+</ul>

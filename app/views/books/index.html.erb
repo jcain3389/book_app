@@ -1,16 +1,22 @@
 <h1><%= @user.name %>'s Bookshelf</h1>
 
-<ol>
+<ul class="author-book-results">
   <% @books.each do |book| %>
-    <li><div class="book-info"><%= link_to "#{book.title}", books_selection_path + "?id=#{book.grb_id}"%>  |   <%= book.author %>  |
+    <li>
+      <div class="book-info">
+        <%= link_to "#{book.title}", books_selection_path + "?id=#{book.grb_id}"%>
+
+        <%= form_for [@user, book], method: 'delete' do |f| %>
+          <%= f.submit "Delete", id: "destroy" %>
+        <% end %>
+
         <%= form_for [@user, book] do |f| %>
           <%= f.hidden_field :read, :value => true %>
           <%= f.submit book.read ? "Read" : "Unread", id: "update" %>
-        <%end%> |
-        <%= form_for [@user, book], method: 'delete' do |f| %>
-          <%= f.submit "Delete", id: "destroy" %>
-        <% end %></div></li>
+        <%end%>
+      </div>
+    </li>
   <% end %>
-</ol>
+</ul>
 
 
