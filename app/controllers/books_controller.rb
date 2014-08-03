@@ -1,4 +1,6 @@
 class BooksController < ApplicationController
+  before_action :find_book, only: [:edit, :update, :destroy]
+
   def index
     @books = current_user.books
     @user = current_user
@@ -12,17 +14,14 @@ class BooksController < ApplicationController
   end
 
   def edit
-    @book = Book.find(params[:id])
   end
 
   def update
-    @book = Book.find(params[:id])
     @book.update(book_params)
     redirect_to user_books_path
   end
 
   def destroy
-    @book = Book.find(params[:id])
     @book.destroy
     redirect_to user_books_path
   end
@@ -87,6 +86,10 @@ class BooksController < ApplicationController
   def get_book_review(id)
     book_review = HTTParty.get("https://www.goodreads.com/book/show/#{id}?format=json&key=#{ENV['GR_API_KEY']}")
     return book_review
+  end
+
+  def find_book
+    @book = Book.find(params[:id])
   end
 
   def book_params

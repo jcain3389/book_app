@@ -12,7 +12,7 @@ class UsersController < ApplicationController
     @user = User.new(user_params)
     if @user.save #Evaluates to 't' or 'f' based on whether or not the validations in user.rb model passed when user_params was entered.
       sign_in @user #Automatically signs in newly-created users.
-      redirect_to @user #Redirects to that new user's page.
+      redirect_to root_path #Redirects to that new user's page.
     else
       render :new #If you messed up you get taken back to the form to re-enter your info.
     end
