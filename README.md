@@ -14,6 +14,7 @@
 * Authentication & Authorization from scratch using [bcrypt-ruby](http://bcrypt-ruby.rubyforge.org/)
 * [Good Reads API](https://www.goodreads.com/api) & [HTTParty](https://github.com/jnunemaker/httparty)
 * Testing using using [rspec-rails](https://github.com/rspec/rspec-rails), [capybara](https://github.com/jnicklas/capybara), [shoulda-matchers](https://github.com/thoughtbot/shoulda-matchers) and [factory_girl_rails](https://github.com/thoughtbot/factory_girl_rails)
+* [Link to Heroku App](https://dashboard.heroku.com/apps/limitless-river-1417/resources)
 
 ### User Stories Completed
 
