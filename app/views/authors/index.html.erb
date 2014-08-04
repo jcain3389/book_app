@@ -3,7 +3,7 @@
 <ul class="author-book-results">
   <% @authors.each do |author| %>
     <li><div class="author-info"><%= link_to "#{author.name}", authors_selection_path + "?id=#{author.gra_id}" %><%= form_for [@user, author], method: 'delete' do |f| %>
-        <%= f.submit "Delete", id: "destroy" %>
+        <%= f.submit "DELETE", id: "destroy" %>
       <% end %></div></li>
   <% end %>
 </ul>

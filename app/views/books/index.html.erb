@@ -7,12 +7,12 @@
         <%= link_to "#{book.title}", books_selection_path + "?id=#{book.grb_id}"%>
 
         <%= form_for [@user, book], method: 'delete' do |f| %>
-          <%= f.submit "Delete", id: "destroy" %>
+          <%= f.submit "DELETE", id: "destroy" %>
         <% end %>
 
         <%= form_for [@user, book] do |f| %>
           <%= f.hidden_field :read, :value => true %>
-          <%= f.submit book.read ? "Read" : "Unread", id: "update" %>
+          <%= f.submit book.read ? "READ" : "UNREAD", id: "update" %>
         <%end%>
       </div>
     </li>

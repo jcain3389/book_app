@@ -3,21 +3,17 @@
   <ul class="author-book-results">
     <li><%= link_to "Home", root_path %></li>
     <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-      <li>
-        Signed in as <%= link_to current_user.name, current_user %>
-        <%= f.submit 'Sign out', id: 'signout' %>
-      </li>
+      <!-- <li><b><%= link_to current_user.name, current_user %>'s</b> Account</li> -->
+      <li><%= f.submit 'SIGN OUT', id: 'signout' %></li>
     <% end %>
     <li><%= link_to "#{current_user.name}'s Books", user_books_path(current_user) %></li>
-    <br>
-    <li><%= link_to "#{current_user.name}'s Authors", user_authors_path(current_user) %>
-    </li>
-    <br>
+    <li><%= link_to "#{current_user.name}'s Authors", user_authors_path(current_user) %></li>
   </ul>
 <% else %>
   <ul class="author-book-results">
     <li><%= link_to "Home", root_path %></li>
-    <li><%= link_to "Sign In", signin_path %>  <%= link_to "Sign up", signup_path %></li>
+    <li><%= link_to "Sign In", signin_path %></li>
+    <li><%= link_to "Sign up", signup_path %></li>
   </ul>
 <% end %>
 

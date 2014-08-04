@@ -11,15 +11,17 @@
 <div class="main">
   <p><%= @author_about.html_safe %></p>
 
+  <% if signed_in? %>
+    <%= form_for [@user, @author] do |f| %>
+      <%= f.hidden_field :name, :value => @selection["name"] %>
+      <%= f.hidden_field :gra_id, :value => @selection["id"] %>
+      <%= f.submit "ADD TO AUTHORS LIST", id: "submit" %>
+    <% end %>
+  <% end %>
+
   <div class="reviews">
-    <b><%= link_to "BOOKS BY #{@selection["name"].upcase}", authors_books_path + "?id=#{@selection["id"]}" %></b>
+    <%= link_to "BOOKS BY #{@selection["name"].upcase}", authors_books_path + "?id=#{@selection["id"]}" %>
   </div>
+
 </div>
 
-<% if signed_in? %>
-  <%= form_for [@user, @author] do |f| %>
-    <%= f.hidden_field :name, :value => @selection["name"] %>
-    <%= f.hidden_field :gra_id, :value => @selection["id"] %>
-    <%= f.submit "Add #{@selection["name"]} to your 'Authors to Read' list", id: "submit" %>
-  <% end %>
-<% end %>
