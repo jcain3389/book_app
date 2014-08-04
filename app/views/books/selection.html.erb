@@ -19,12 +19,20 @@
   <b><%= link_to "REVIEWS >>", books_reviews_path + "?id=#{@selection["id"]}" %></b>
 </div>
 
+<div class="reviews">
+  <b><%= link_to "SEARCH FOR A BOOK >>", root_path %></b>
+</div>
+
+<div class="reviews">
+  <b><%= link_to "SEARCH FOR AN AUTHOR >>", root_path %></b>
+</div>
+
 <% if signed_in? %>
-  <%= form_for [current_user, @book] do |f| %>
-    <%= f.hidden_field :title, :value => @selection["title"] %>
-    <%= f.hidden_field :author, :value => @author_name %>
-    <%= f.hidden_field :grb_id, :value => @selection["id"] %>
-    <%= f.submit "Add this book to your bookshelf", id: "submit" %>
-  <% end %>
+  <div class="reviews"><%= form_for [current_user, @book] do |f| %>
+      <%= f.hidden_field :title, :value => @selection["title"] %>
+      <%= f.hidden_field :author, :value => @author_name %>
+      <%= f.hidden_field :grb_id, :value => @selection["id"] %>
+      <%= f.submit "Add this book to your bookshelf", id: "submit" %>
+    <% end %></div>
 <% end %>
 

@@ -1,13 +1,23 @@
 
 <% if signed_in? %>
-  <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
-    <span class="links">Signed in as <%= link_to current_user.name, current_user %></span>
-    <%= f.submit 'Sign out', id: 'signout' %>
-  <% end %>
-  <span class="links"><%= link_to "#{current_user.name}'s Bookshelf  |", user_books_path(current_user) %></span>
-  <span class="links"><%= link_to "#{current_user.name}'s Authors to Read", user_authors_path(current_user) %></span>
+  <ul class="author-book-results">
+    <li><%= link_to "Home", root_path %></li>
+    <%= form_for :session, url: signout_path, method: 'delete' do |f| %>
+      <li>
+        Signed in as <%= link_to current_user.name, current_user %>
+        <%= f.submit 'Sign out', id: 'signout' %>
+      </li>
+    <% end %>
+    <li><%= link_to "#{current_user.name}'s Books", user_books_path(current_user) %></li>
+    <br>
+    <li><%= link_to "#{current_user.name}'s Authors", user_authors_path(current_user) %>
+    </li>
+    <br>
+  </ul>
 <% else %>
-  <span class="links"><%= link_to "Sign In", signin_path %>  <%= link_to "Sign up", signup_path %></span>
+  <ul class="author-book-results">
+    <li><%= link_to "Home", root_path %></li>
+    <li><%= link_to "Sign In", signin_path %>  <%= link_to "Sign up", signup_path %></li>
+  </ul>
 <% end %>
-<span class="links"><%= link_to "Home", root_path %></span>
 
