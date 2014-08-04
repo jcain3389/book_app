@@ -151,6 +151,109 @@ form label {
   background-color: white;
 }
 
+#submit {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #cd853f;
+  cursor: pointer;
+  font-family: helvetica;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#submit:hover {
+  background-color: white;
+}
+
+#destroy {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #cd853f;
+  cursor: pointer;
+  font-family: helvetica;
+  margin-top: -6px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#destroy:hover {
+  background-color: #cd853f;
+  color: white;
+}
+
+#update {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #cd853f;
+  cursor: pointer;
+  font-family: helvetica;
+  margin-top: -6px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#update:hover {
+  background-color: #cd853f;
+  color: white;
+}
+
+#signout {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #7f3d17;
+  cursor: pointer;
+  font-family: helvetica;
+  margin-left: -110px;
+  margin-top: -6px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#signout:hover {
+  background-color: #cd853f;
+  color: white;
+}
+
+#author_submit {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #7f3d17;
+  cursor: pointer;
+  font-family: helvetica;
+  margin-left: -110px;
+  margin-top: -6px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#author_submit:hover {
+  background-color: #cd853f;
+  color: white;
+}
+
+#book_submit {
+  background-color: rgba(255,255,255,0.5);
+  border: none;
+  border-radius: 5px;
+  color: #7f3d17;
+  cursor: pointer;
+  font-family: helvetica;
+  margin-left: -110px;
+  margin-top: -6px;
+  padding: 10px;
+  text-decoration: none;
+}
+
+#book_submit:hover {
+  background-color: #cd853f;
+  color: white;
+}
+
 .name-title {
   background-color: rgba(255,255,255,0.5);
   border-radius: 10px;
