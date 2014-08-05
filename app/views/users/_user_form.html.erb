@@ -7,19 +7,29 @@
 </ul>
 <% end %>
 
-<%= form_for @user do |f| %>
-  <%= f.label :name %>
-  <%= f.text_field :name %>
+<ul class="author-book-results">
+  <%= form_for @user do |f| %>
+      <li>
+        <%= f.label :name %>
+        <%= f.text_field :name %>
+      </li>
 
-  <%= f.label :email %>
-  <%= f.text_field :email %>
+      <li>
+        <%= f.label :email %>
+        <%= f.text_field :email %>
+      </li>
 
-  <%= f.label :password %>
-  <%= f.password_field :password %>
+      <li>
+        <%= f.label :password %>
+        <%= f.password_field :password %>
+      </li>
 
-  <%= f.label :password_confirmation, 'Confirm Password' %>
-  <%= f.password_field :password_confirmation %>
+      <li>
+        <%= f.label :password_confirmation, 'Confirm Password' %>
+        <%= f.password_field :password_confirmation %>
+        <%= f.submit 'Submit', id: 'submit' %>
+      </li>
 
-  <%= f.submit 'Submit', id: 'submit' %>
-<% end %>
+  <% end %>
+</ul>
 

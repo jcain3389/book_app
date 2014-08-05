@@ -5,19 +5,27 @@
 <% end %>
 
 
-<%= form_tag("/authors_results", method: "get") do %>
-  <%= label_tag(:author_query, "Search for author:") %>
-  <%= text_field_tag(:author_query, nil, :placeholder => "Enter name...") %>
-  <%= submit_tag("SEARCH", id: "author_submit") %>
-<% end %>
+<ul class="author-book-results">
+  <%= form_tag("/authors_results", method: "get") do %>
+    <li>
+      <%= label_tag(:author_query, "Search for author:", class: 'search-text') %>
+      <%= text_field_tag(:author_query, nil, :placeholder => "Type the name of an author...", class: 'search-input') %>
+      <%= submit_tag("SEARCH", id: "author_submit", class: 'search-submit') %>
+    </li>
+  <% end %>
+</ul>
 
 
 
-<%= form_tag("/books_results", method: "get") do %>
-  <%= label_tag(:book_query, "Search for book:") %>
-  <%= text_field_tag(:book_query, nil, :placeholder => "Enter title...") %>
-  <%= submit_tag("SEARCH", id: "book_submit") %>
-<% end %>
+<ul class="author-book-results">
+  <%= form_tag("/books_results", method: "get") do %>
+    <li>
+      <%= label_tag(:book_query, "Search for book:", class: 'search-text') %>
+      <%= text_field_tag(:book_query, nil, :placeholder => "Type the title of a book...", class: 'search-input') %>
+      <%= submit_tag("SEARCH", id: "book_submit", class: 'search-submit') %>
+    </li>
+  <% end %>
+</ul>
 
 
 
