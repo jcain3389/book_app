@@ -14,7 +14,7 @@ body {
 }
 
 h1 {
-  color: #cd853f;
+  color: rgba(132,38,28,1);
   font-family: "Londrina Shadow";
   font-size: 60px;
   margin: 20px;
@@ -80,7 +80,7 @@ p {
 }
 
 .nav {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(210,175,117,1);
   border-radius: 10px;
   color: white;
   left: 10px;
@@ -219,14 +219,13 @@ form label {
 }
 
 #author_submit {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
   border: none;
   border-radius: 5px;
   color: #7f3d17;
   cursor: pointer;
   font-family: helvetica;
-  margin-left: -110px;
-  margin-top: -6px;
+  margin-left: 10px;
   padding: 10px;
   text-decoration: none;
 }
@@ -237,14 +236,13 @@ form label {
 }
 
 #book_submit {
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(255,255,255,0.7);
   border: none;
   border-radius: 5px;
   color: #7f3d17;
   cursor: pointer;
   font-family: helvetica;
-  margin-left: -110px;
-  margin-top: -6px;
+  margin-left: 10px;
   padding: 10px;
   text-decoration: none;
 }
@@ -275,4 +273,20 @@ form label {
 .widget {
   margin-left: -33px;
 }
+
+.search-text {
+  color: #cd853f;
+  float: left;
+  font-family: helvetica;
+  margin-top: 8px;
+}
+
+.search-input {
+  float: left;
+  height: 25px;
+  margin-top: 3px;
+  margin-left: 10px;
+  width: 250px;
+}
+
 
